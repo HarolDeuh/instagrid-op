@@ -42,16 +42,28 @@ class ViewController: UIViewController {
     }
     
     private func manageTopStackView() {
+        firstLayout.isSelected = true
+        secondLayout.isSelected = false
+        thirdLayout.isSelected = false
         bottomStackView.arrangedSubviews[1].isHidden = false
         topStackView.arrangedSubviews[1].isHidden = true
     }
     
     private func manageBottomStackView() {
+        
+        secondLayout.isSelected = true
+        
+        firstLayout.isSelected = false
+        thirdLayout.isSelected = false
         topStackView.arrangedSubviews[1].isHidden = false
         bottomStackView.arrangedSubviews[1].isHidden = true
     }
     
     private func manageDefaultView() {
+        thirdLayout.isSelected = true
+        firstLayout.isSelected = false
+        secondLayout.isSelected = false
+        
         topStackView.arrangedSubviews[1].isHidden = false
         bottomStackView.arrangedSubviews[1].isHidden = false
     }
@@ -64,6 +76,10 @@ class ViewController: UIViewController {
         firstLayout.setImage(selectedlayout1, for: .selected)
         secondLayout.setImage(selectedLayout2, for: .selected)
         thirdLayout.setImage(selectedLayout3, for: .selected)
+        
+        firstLayout.setImage(#imageLiteral(resourceName: "layout1"), for: .disabled)
+        secondLayout.setImage(#imageLiteral(resourceName: "layout2"), for: .disabled)
+        thirdLayout.setImage(#imageLiteral(resourceName: "layout3"), for: .disabled)
         //topStackView.addBackgroundColor(color: #colorLiteral(red: 0.06274509804, green: 0.4, blue: 0.5960784314, alpha: 1))
         
         

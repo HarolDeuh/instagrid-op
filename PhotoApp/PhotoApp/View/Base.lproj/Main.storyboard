@@ -70,52 +70,66 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BdR-WC-Iob" userLabel="Main Stack view" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
-                                <rect key="frame" x="37" y="185.5" width="301" height="301"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUx-m5-lPa" userLabel="Main view">
+                                <rect key="frame" x="37.5" y="185.5" width="300" height="300"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qgP-TH-dpf" userLabel="Top Stack View" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="301" height="143"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BdR-WC-Iob" userLabel="Main Stack view" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="15" width="270" height="270"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOQ-H0-cVS">
-                                                <rect key="frame" x="0.0" y="0.0" width="143" height="143"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYx-9K-uTp">
-                                                <rect key="frame" x="158" y="0.0" width="143" height="143"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qgP-TH-dpf" userLabel="Top Stack View" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="127.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOQ-H0-cVS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYx-9K-uTp">
+                                                        <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IGa-LV-QBy" userLabel="Bottom Stack View" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="142.5" width="270" height="127.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-fV-BFp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-08-HO6">
+                                                        <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IGa-LV-QBy" userLabel="Bottom Stack View" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="158" width="301" height="143"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-fV-BFp">
-                                                <rect key="frame" x="0.0" y="0.0" width="143" height="143"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-08-HO6">
-                                                <rect key="frame" x="158" y="0.0" width="143" height="143"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            </view>
-                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="BdR-WC-Iob" secondAttribute="height" multiplier="1:1" id="2bb-G3-15E"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="BdR-WC-Iob" secondAttribute="height" multiplier="1:1" id="2bb-G3-15E"/>
+                                    <constraint firstAttribute="height" constant="300" id="0aB-3J-Dw0"/>
+                                    <constraint firstItem="BdR-WC-Iob" firstAttribute="top" secondItem="NUx-m5-lPa" secondAttribute="top" constant="15" id="edK-3R-gam"/>
+                                    <constraint firstItem="BdR-WC-Iob" firstAttribute="leading" secondItem="NUx-m5-lPa" secondAttribute="leading" constant="15" id="f8K-Ny-QC7"/>
+                                    <constraint firstAttribute="bottom" secondItem="BdR-WC-Iob" secondAttribute="bottom" constant="15" id="kpx-vv-lec"/>
+                                    <constraint firstAttribute="width" constant="300" id="moe-YU-rpb"/>
+                                    <constraint firstAttribute="trailing" secondItem="BdR-WC-Iob" secondAttribute="trailing" constant="15" id="oML-6h-By1"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.71764705882352942" green="0.84313725490196079" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="NUx-m5-lPa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37.5" id="6uA-zn-Ibl"/>
+                            <constraint firstItem="NUx-m5-lPa" firstAttribute="top" secondItem="G7D-ay-Ld6" secondAttribute="bottom" constant="10" id="PV1-gn-1sF"/>
                             <constraint firstItem="bWq-97-N4O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rah-kU-c0g"/>
-                            <constraint firstItem="BdR-WC-Iob" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="VuI-IK-sEu"/>
                             <constraint firstItem="r8l-Ea-4qu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YE5-kB-5E7"/>
-                            <constraint firstAttribute="trailing" secondItem="BdR-WC-Iob" secondAttribute="trailing" constant="37" id="fCx-Ue-APd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NUx-m5-lPa" secondAttribute="trailing" constant="37.5" id="Zda-DF-uzw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bWq-97-N4O" secondAttribute="bottom" constant="32" id="lfU-W6-Hz3"/>
                             <constraint firstItem="G7D-ay-Ld6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qof-1I-YbH"/>
                             <constraint firstItem="G7D-ay-Ld6" firstAttribute="top" secondItem="r8l-Ea-4qu" secondAttribute="bottom" constant="60" id="sd8-0P-OyP"/>
-                            <constraint firstItem="BdR-WC-Iob" firstAttribute="top" secondItem="G7D-ay-Ld6" secondAttribute="bottom" constant="10" id="vVT-Sy-HgP"/>
                             <constraint firstItem="r8l-Ea-4qu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="zj9-24-FtR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
