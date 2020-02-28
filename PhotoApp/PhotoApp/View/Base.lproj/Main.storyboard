@@ -40,14 +40,14 @@
                                             <action selector="layoutOne:" destination="ljo-uC-UJZ" eventType="touchUpInside" id="nGf-ws-uRK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENJ-Z0-JtA" customClass="LayoutButton" customModule="PhotoApp" customModuleProvider="target">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENJ-Z0-JtA" customClass="LayoutButton" customModule="PhotoApp" customModuleProvider="target">
                                         <rect key="frame" x="100" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="layout2"/>
                                         <connections>
                                             <action selector="secondLayoutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jQh-mu-kBa"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KT-Xu-Dbg" customClass="LayoutButton" customModule="PhotoApp" customModuleProvider="target">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KT-Xu-Dbg" customClass="LayoutButton" customModule="PhotoApp" customModuleProvider="target">
                                         <rect key="frame" x="200" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="layout3"/>
                                         <connections>
@@ -70,10 +70,10 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BdR-WC-Iob" userLabel="Main Stack view">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BdR-WC-Iob" userLabel="Main Stack view" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
                                 <rect key="frame" x="37" y="185.5" width="301" height="301"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qgP-TH-dpf" userLabel="Top Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qgP-TH-dpf" userLabel="Top Stack View" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="301" height="143"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOQ-H0-cVS">
@@ -86,7 +86,7 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IGa-LV-QBy" userLabel="Bottom Stack View">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IGa-LV-QBy" userLabel="Bottom Stack View" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="158" width="301" height="143"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-fV-BFp">

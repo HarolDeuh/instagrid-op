@@ -12,10 +12,10 @@ class ViewController: UIViewController {
     
     // MARK: IBOutlets
     // StackViews
-    @IBOutlet weak var mainStackView: UIStackView!
-    @IBOutlet weak var topStackView: UIStackView!
-    @IBOutlet weak var bottomStackView: UIStackView!
-    @IBOutlet weak var buttonsStackView: UIStackView!
+    @IBOutlet weak var mainStackView: CustomStackView!
+    @IBOutlet weak var topStackView: CustomStackView!
+    @IBOutlet weak var bottomStackView: CustomStackView!
+    @IBOutlet weak var buttonsStackView: CustomStackView!
     
     // Layouts
     @IBOutlet weak var firstLayout: LayoutButton!
@@ -24,43 +24,54 @@ class ViewController: UIViewController {
     
     // My constants
     let isSelectedView = UIImageView(image: #imageLiteral(resourceName: "Selected"))
+    let selectedlayout1 = #imageLiteral(resourceName: "selectedLayout1")
+    let selectedLayout2 = #imageLiteral(resourceName: "selectedLayout2")
+    let selectedLayout3 = #imageLiteral(resourceName: "selectedLayout3")
    
-    
-    @IBAction func firstLayoutTapped(_ sender: Any) {
-        firstLayout.isSelected = true
-        if firstLayout.isSelected {
-            print("etat du bouton")
-        }
         
+    @IBAction func firstLayoutTapped(_ sender: UIButton) {
+        manageTopStackView()
     }
     
-    @IBAction func secondLayoutTapped(_ sender: Any) {
-        secondLayout.layoutSelected()
+    @IBAction func secondLayoutTapped(_ sender: UIButton) {
+        manageBottomStackView()
     }
     
-    @IBAction func thirdLayoutPressed(_ sender: Any) {
-        thirdLayout.layoutSelected()
+    @IBAction func thirdLayoutPressed(_ sender: UIButton) {
+        manageDefaultView()
+    }
+    
+    private func manageTopStackView() {
+        bottomStackView.arrangedSubviews[1].isHidden = false
+        topStackView.arrangedSubviews[1].isHidden = true
+    }
+    
+    private func manageBottomStackView() {
+        topStackView.arrangedSubviews[1].isHidden = false
+        bottomStackView.arrangedSubviews[1].isHidden = true
+    }
+    
+    private func manageDefaultView() {
+        topStackView.arrangedSubviews[1].isHidden = false
+        bottomStackView.arrangedSubviews[1].isHidden = false
     }
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        mainStackView.addBackgroundColor(color: #colorLiteral(red: 0.06274509804, green: 0.4, blue: 0.5960784314, alpha: 1))
+        firstLayout.setImage(selectedlayout1, for: .selected)
+        secondLayout.setImage(selectedLayout2, for: .selected)
+        thirdLayout.setImage(selectedLayout3, for: .selected)
+        //topStackView.addBackgroundColor(color: #colorLiteral(red: 0.06274509804, green: 0.4, blue: 0.5960784314, alpha: 1))
+        
+        
     }
 
 
 }
 
 
-extension UIStackView {
-    func addBackgroundColor(color: UIColor) {
-        let mySubview = UIView(frame: bounds)
-        mySubview.backgroundColor = color
-        mySubview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        insertSubview(mySubview, at: 0)
-    }
-}
+
 

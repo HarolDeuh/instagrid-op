@@ -16,6 +16,7 @@
 		5450523A2406E43400084CC1 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 545052382406E43400084CC1 /* ThirstySoftRegular.otf */; };
 		5450523B2406E43400084CC1 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 545052392406E43400084CC1 /* Delm-Medium.otf */; };
 		549662AC240814C200AC55BE /* LayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549662AB240814C200AC55BE /* LayoutButton.swift */; };
+		54ED20D8240967CF00A5C879 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ED20D7240967CF00A5C879 /* CustomStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		545052382406E43400084CC1 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		545052392406E43400084CC1 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		549662AB240814C200AC55BE /* LayoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutButton.swift; sourceTree = "<group>"; };
+		54ED20D7240967CF00A5C879 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			children = (
 				545052262406E26600084CC1 /* Main.storyboard */,
 				549662AB240814C200AC55BE /* LayoutButton.swift */,
+				54ED20D7240967CF00A5C879 /* CustomStackView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54ED20D8240967CF00A5C879 /* CustomStackView.swift in Sources */,
 				549662AC240814C200AC55BE /* LayoutButton.swift in Sources */,
 				545052252406E26600084CC1 /* ViewController.swift in Sources */,
 				545052212406E26600084CC1 /* AppDelegate.swift in Sources */,
