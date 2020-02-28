@@ -15,7 +15,7 @@
 		5450522D2406E26800084CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5450522B2406E26800084CC1 /* LaunchScreen.storyboard */; };
 		5450523A2406E43400084CC1 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 545052382406E43400084CC1 /* ThirstySoftRegular.otf */; };
 		5450523B2406E43400084CC1 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 545052392406E43400084CC1 /* Delm-Medium.otf */; };
-		5450523D2407D04600084CC1 /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450523C2407D04600084CC1 /* LayoutView.swift */; };
+		549662AC240814C200AC55BE /* LayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549662AB240814C200AC55BE /* LayoutButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		5450522E2406E26800084CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		545052382406E43400084CC1 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		545052392406E43400084CC1 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
-		5450523C2407D04600084CC1 /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
+		549662AB240814C200AC55BE /* LayoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				545052262406E26600084CC1 /* Main.storyboard */,
-				5450523C2407D04600084CC1 /* LayoutView.swift */,
+				549662AB240814C200AC55BE /* LayoutButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5450523D2407D04600084CC1 /* LayoutView.swift in Sources */,
+				549662AC240814C200AC55BE /* LayoutButton.swift in Sources */,
 				545052252406E26600084CC1 /* ViewController.swift in Sources */,
 				545052212406E26600084CC1 /* AppDelegate.swift in Sources */,
 				545052232406E26600084CC1 /* SceneDelegate.swift in Sources */,

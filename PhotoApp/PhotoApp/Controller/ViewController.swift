@@ -9,28 +9,39 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // MARK: IBOutlets
+    // StackViews
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var topStackView: UIStackView!
     @IBOutlet weak var bottomStackView: UIStackView!
+    @IBOutlet weak var buttonsStackView: UIStackView!
     
-    @IBOutlet weak var firstLayout: UIButton!
-    @IBOutlet weak var secondLayout: UIButton!
-    @IBOutlet weak var thirdLayout: UIButton!
+    // Layouts
+    @IBOutlet weak var firstLayout: LayoutButton!
+    @IBOutlet weak var secondLayout: LayoutButton!
+    @IBOutlet weak var thirdLayout: LayoutButton!
     
-    func layoutIsSelected(_ theButton: UIButton) {
-        theButton.addSubview(UIImageView(image: #imageLiteral(resourceName: "Selected")))
-    }
-    
-    func testSelected() {
-        let isSelectedSubview = UIImageView(image: #imageLiteral(resourceName: "Selected"))
-        
-        
-    }
+    // My constants
+    let isSelectedView = UIImageView(image: #imageLiteral(resourceName: "Selected"))
+   
     
     @IBAction func firstLayoutTapped(_ sender: Any) {
-        firstLayout.addSubview(UIImageView(image: #imageLiteral(resourceName: "Selected")))
+        firstLayout.isSelected = true
+        if firstLayout.isSelected {
+            print("etat du bouton")
+        }
         
     }
+    
+    @IBAction func secondLayoutTapped(_ sender: Any) {
+        secondLayout.layoutSelected()
+    }
+    
+    @IBAction func thirdLayoutPressed(_ sender: Any) {
+        thirdLayout.layoutSelected()
+    }
+    
     
 
     override func viewDidLoad() {

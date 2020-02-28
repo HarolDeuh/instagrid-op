@@ -32,20 +32,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bWq-97-N4O">
                                 <rect key="frame" x="47.5" y="555" width="280" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXq-Br-Jb6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXq-Br-Jb6" customClass="LayoutButton" customModule="PhotoApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="layout1"/>
                                         <connections>
                                             <action selector="firstLayoutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aRh-G6-Yo7"/>
+                                            <action selector="layoutOne:" destination="ljo-uC-UJZ" eventType="touchUpInside" id="nGf-ws-uRK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENJ-Z0-JtA">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENJ-Z0-JtA" customClass="LayoutButton" customModule="PhotoApp" customModuleProvider="target">
                                         <rect key="frame" x="100" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="layout2"/>
+                                        <connections>
+                                            <action selector="secondLayoutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jQh-mu-kBa"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KT-Xu-Dbg">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KT-Xu-Dbg" customClass="LayoutButton" customModule="PhotoApp" customModuleProvider="target">
                                         <rect key="frame" x="200" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="layout3"/>
+                                        <connections>
+                                            <action selector="thirdLayoutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idu-KH-qvT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -115,6 +122,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomStackView" destination="IGa-LV-QBy" id="6bm-zh-vOE"/>
+                        <outlet property="buttonsStackView" destination="bWq-97-N4O" id="8jQ-La-kTk"/>
                         <outlet property="firstLayout" destination="yXq-Br-Jb6" id="Qhe-SZ-UoN"/>
                         <outlet property="mainStackView" destination="BdR-WC-Iob" id="B1W-Py-g2f"/>
                         <outlet property="secondLayout" destination="ENJ-Z0-JtA" id="Nmp-db-WNZ"/>
@@ -123,6 +131,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="ljo-uC-UJZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="200" y="66"/>
         </scene>
