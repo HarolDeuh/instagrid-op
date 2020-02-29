@@ -22,8 +22,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondLayout: LayoutButton!
     @IBOutlet weak var thirdLayout: LayoutButton!
     
-    // My constants
-    let isSelectedView = UIImageView(image: #imageLiteral(resourceName: "Selected"))
+    //Label
+    @IBOutlet weak var instructionLabel: UILabel!
+    
+    //Constants
     let selectedlayout1 = #imageLiteral(resourceName: "selectedLayout1")
     let selectedLayout2 = #imageLiteral(resourceName: "selectedLayout2")
     let selectedLayout3 = #imageLiteral(resourceName: "selectedLayout3")
@@ -50,9 +52,7 @@ class ViewController: UIViewController {
     }
     
     private func manageBottomStackView() {
-        
         secondLayout.isSelected = true
-        
         firstLayout.isSelected = false
         thirdLayout.isSelected = false
         topStackView.arrangedSubviews[1].isHidden = false
@@ -63,7 +63,6 @@ class ViewController: UIViewController {
         thirdLayout.isSelected = true
         firstLayout.isSelected = false
         secondLayout.isSelected = false
-        
         topStackView.arrangedSubviews[1].isHidden = false
         bottomStackView.arrangedSubviews[1].isHidden = false
     }
@@ -80,13 +79,24 @@ class ViewController: UIViewController {
         firstLayout.setImage(#imageLiteral(resourceName: "layout1"), for: .disabled)
         secondLayout.setImage(#imageLiteral(resourceName: "layout2"), for: .disabled)
         thirdLayout.setImage(#imageLiteral(resourceName: "layout3"), for: .disabled)
-        //topStackView.addBackgroundColor(color: #colorLiteral(red: 0.06274509804, green: 0.4, blue: 0.5960784314, alpha: 1))
-        
-        
+    }
+    
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        coordinator.animate(alongsideTransition: { context in
+            if UIDevice.current.orientation.isLandscape {
+                // activate landscape changes
+                print("Landscape")
+                
+            } else {
+                // activate portrait changes
+                print("Portrait")
+            }
+        })
     }
 
 
 }
+
 
 
 

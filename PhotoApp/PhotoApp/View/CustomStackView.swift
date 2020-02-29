@@ -20,13 +20,6 @@ class CustomStackView: UIStackView {
         }
     }
     
-    func addBackgroundColor(color: UIColor) {
-        let mySubview = UIView(frame: bounds)
-        mySubview.backgroundColor = color
-        mySubview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        insertSubview(mySubview, at: 0)
-    }
-    
     private func setStyle(_ style: Style) {
         
         switch style {

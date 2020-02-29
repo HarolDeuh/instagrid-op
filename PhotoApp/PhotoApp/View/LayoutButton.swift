@@ -35,6 +35,7 @@ class LayoutButton: UIButton {
     
     private func buttonStyle() {
         addSubview(selectedSubview)
+        
     }
     
     func setbuttonStyle() {
