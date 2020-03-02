@@ -96,11 +96,29 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOQ-H0-cVS">
                                                         <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LePlus" translatesAutoresizingMaskIntoConstraints="NO" id="d6h-Dv-Z3y">
+                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                            </imageView>
+                                                        </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="d6h-Dv-Z3y" firstAttribute="centerY" secondItem="BOQ-H0-cVS" secondAttribute="centerY" id="BI1-8M-IeH"/>
+                                                            <constraint firstItem="d6h-Dv-Z3y" firstAttribute="centerX" secondItem="BOQ-H0-cVS" secondAttribute="centerX" id="Cit-KA-9TM"/>
+                                                        </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYx-9K-uTp">
                                                         <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LePlus" translatesAutoresizingMaskIntoConstraints="NO" id="67y-v1-Gcb">
+                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                            </imageView>
+                                                        </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="67y-v1-Gcb" firstAttribute="centerY" secondItem="ZYx-9K-uTp" secondAttribute="centerY" id="Q0a-ap-FEp"/>
+                                                            <constraint firstItem="67y-v1-Gcb" firstAttribute="centerX" secondItem="ZYx-9K-uTp" secondAttribute="centerX" id="lqj-Kl-b1W"/>
+                                                        </constraints>
                                                     </view>
                                                 </subviews>
                                             </stackView>
@@ -109,11 +127,29 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-fV-BFp">
                                                         <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LePlus" translatesAutoresizingMaskIntoConstraints="NO" id="JJ1-QE-nZX">
+                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                            </imageView>
+                                                        </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="JJ1-QE-nZX" firstAttribute="centerY" secondItem="YcZ-fV-BFp" secondAttribute="centerY" id="HAE-zj-IFs"/>
+                                                            <constraint firstItem="JJ1-QE-nZX" firstAttribute="centerX" secondItem="YcZ-fV-BFp" secondAttribute="centerX" id="vE3-4b-7k9"/>
+                                                        </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-08-HO6">
                                                         <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LePlus" translatesAutoresizingMaskIntoConstraints="NO" id="Png-wl-E4A">
+                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                            </imageView>
+                                                        </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Png-wl-E4A" firstAttribute="centerY" secondItem="ReH-08-HO6" secondAttribute="centerY" id="p2M-PE-rYH"/>
+                                                            <constraint firstItem="Png-wl-E4A" firstAttribute="centerX" secondItem="ReH-08-HO6" secondAttribute="centerX" id="zBJ-dh-8ih"/>
+                                                        </constraints>
                                                     </view>
                                                 </subviews>
                                             </stackView>
@@ -320,6 +356,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LePlus" width="40" height="40"/>
         <image name="arrowLeft" width="9.5" height="13.5"/>
         <image name="arrowUp" width="13.5" height="9.5"/>
         <image name="layout1" width="80" height="80"/>
