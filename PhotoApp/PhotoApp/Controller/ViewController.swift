@@ -85,11 +85,11 @@ class ViewController: UIViewController {
         coordinator.animate(alongsideTransition: { context in
             if UIDevice.current.orientation.isLandscape {
                 // activate landscape changes
-                print("Landscape")
+                self.instructionLabel.text = "Swipe left to share"
                 
             } else {
                 // activate portrait changes
-                print("Portrait")
+                self.instructionLabel.text = "Swipe up to share"
             }
         })
     }
