@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,17 +20,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8l-Ea-4qu">
-                                <rect key="frame" x="128.5" y="6" width="118.5" height="39"/>
+                                <rect key="frame" x="148" y="50" width="118.5" height="39"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bWq-97-N4O">
-                                <rect key="frame" x="47.5" y="555" width="280" height="80"/>
+                                <rect key="frame" x="67" y="750" width="280" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXq-Br-Jb6" customClass="LayoutButton" customModule="PhotoApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -69,9 +69,10 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=compact" axis="vertical" distribution="fillEqually" spacing="30"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="G7D-ay-Ld6">
-                                <rect key="frame" x="107.5" y="105" width="160.5" height="53.5"/>
+                                <rect key="frame" x="127" y="149" width="160.5" height="53.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrowUp" translatesAutoresizingMaskIntoConstraints="NO" id="Aj4-p6-Vg4">
                                         <rect key="frame" x="73.5" y="0.0" width="13.5" height="9.5"/>
@@ -86,19 +87,19 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUx-m5-lPa" userLabel="Main view">
-                                <rect key="frame" x="37.5" y="168.5" width="300" height="300"/>
+                                <rect key="frame" x="37.5" y="212.5" width="339" height="339"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BdR-WC-Iob" userLabel="Main Stack view" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="15" width="270" height="270"/>
+                                        <rect key="frame" x="15" y="15" width="309" height="309"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qgP-TH-dpf" userLabel="Top Stack View" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="270" height="127.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="309" height="147"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOQ-H0-cVS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LePlus" translatesAutoresizingMaskIntoConstraints="NO" id="d6h-Dv-Z3y">
-                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                                <rect key="frame" x="53.5" y="53.5" width="40" height="40"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -108,10 +109,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYx-9K-uTp">
-                                                        <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
+                                                        <rect key="frame" x="162" y="0.0" width="147" height="147"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LePlus" translatesAutoresizingMaskIntoConstraints="NO" id="67y-v1-Gcb">
-                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                                <rect key="frame" x="53.5" y="53.5" width="40" height="40"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -123,13 +124,13 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IGa-LV-QBy" userLabel="Bottom Stack View" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="142.5" width="270" height="127.5"/>
+                                                <rect key="frame" x="0.0" y="162" width="309" height="147"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-fV-BFp">
-                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="127.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LePlus" translatesAutoresizingMaskIntoConstraints="NO" id="JJ1-QE-nZX">
-                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                                <rect key="frame" x="53.5" y="53.5" width="40" height="40"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -139,10 +140,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-08-HO6">
-                                                        <rect key="frame" x="142.5" y="0.0" width="127.5" height="127.5"/>
+                                                        <rect key="frame" x="162" y="0.0" width="147" height="147"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="LePlus" translatesAutoresizingMaskIntoConstraints="NO" id="Png-wl-E4A">
-                                                                <rect key="frame" x="44" y="44" width="40" height="40"/>
+                                                                <rect key="frame" x="53.5" y="53.5" width="40" height="40"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -191,6 +192,7 @@
                                 <color key="backgroundColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="BdR-WC-Iob" firstAttribute="top" secondItem="NUx-m5-lPa" secondAttribute="top" constant="15" id="09W-PD-Kcf"/>
+                                    <constraint firstAttribute="width" secondItem="NUx-m5-lPa" secondAttribute="height" multiplier="1:1" id="3Rf-Ap-t4a"/>
                                     <constraint firstAttribute="trailing" secondItem="BdR-WC-Iob" secondAttribute="trailing" constant="15" id="9LC-WL-bRO"/>
                                     <constraint firstAttribute="bottom" secondItem="BdR-WC-Iob" secondAttribute="bottom" constant="15" id="IfA-wH-KDb"/>
                                     <constraint firstAttribute="trailing" secondItem="BdR-WC-Iob" secondAttribute="trailing" constant="15" id="IjL-yt-bXA"/>
@@ -208,6 +210,7 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="3Rf-Ap-t4a"/>
                                         <exclude reference="UOf-pJ-yHw"/>
                                         <exclude reference="hFn-pE-D3n"/>
                                         <exclude reference="09W-PD-Kcf"/>
@@ -222,6 +225,7 @@
                                 </variation>
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
+                                        <include reference="3Rf-Ap-t4a"/>
                                         <exclude reference="UOf-pJ-yHw"/>
                                         <exclude reference="hFn-pE-D3n"/>
                                         <exclude reference="xS1-qP-WU3"/>
@@ -255,6 +259,7 @@
                             <constraint firstItem="G7D-ay-Ld6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="GgA-59-UZQ"/>
                             <constraint firstItem="bWq-97-N4O" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="I2B-se-pMB"/>
                             <constraint firstItem="NUx-m5-lPa" firstAttribute="top" secondItem="r8l-Ea-4qu" secondAttribute="bottom" constant="14" id="Kuw-cC-RHI"/>
+                            <constraint firstItem="r8l-Ea-4qu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="NOD-YX-GD4"/>
                             <constraint firstItem="NUx-m5-lPa" firstAttribute="top" secondItem="G7D-ay-Ld6" secondAttribute="bottom" constant="10" id="PV1-gn-1sF"/>
                             <constraint firstItem="NUx-m5-lPa" firstAttribute="top" secondItem="r8l-Ea-4qu" secondAttribute="top" id="Q4a-1V-xlE">
                                 <variation key="heightClass=compact" constant="15"/>
@@ -266,6 +271,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NUx-m5-lPa" secondAttribute="trailing" constant="37.5" id="Zda-DF-uzw"/>
                             <constraint firstItem="NUx-m5-lPa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b2a-hU-Meo"/>
                             <constraint firstItem="bWq-97-N4O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="bhU-8v-4A7"/>
+                            <constraint firstItem="NUx-m5-lPa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="czd-FF-bhZ"/>
                             <constraint firstItem="NUx-m5-lPa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dME-YN-701"/>
                             <constraint firstItem="bWq-97-N4O" firstAttribute="leading" secondItem="NUx-m5-lPa" secondAttribute="trailing" constant="49" id="fJG-nI-yRu"/>
                             <constraint firstItem="NUx-m5-lPa" firstAttribute="top" secondItem="r8l-Ea-4qu" secondAttribute="bottom" constant="15" id="iQR-me-JIF"/>
@@ -292,6 +298,7 @@
                                 <exclude reference="WXY-Bb-OBW"/>
                                 <exclude reference="XS3-Bd-IYv"/>
                                 <exclude reference="b2a-hU-Meo"/>
+                                <exclude reference="czd-FF-bhZ"/>
                                 <exclude reference="dME-YN-701"/>
                                 <exclude reference="iQR-me-JIF"/>
                                 <exclude reference="xlh-6i-xpr"/>
@@ -322,8 +329,9 @@
                                 <exclude reference="PV1-gn-1sF"/>
                                 <exclude reference="Q4a-1V-xlE"/>
                                 <exclude reference="WXY-Bb-OBW"/>
-                                <include reference="XS3-Bd-IYv"/>
+                                <exclude reference="XS3-Bd-IYv"/>
                                 <exclude reference="b2a-hU-Meo"/>
+                                <include reference="czd-FF-bhZ"/>
                                 <exclude reference="dME-YN-701"/>
                                 <exclude reference="iQR-me-JIF"/>
                                 <exclude reference="xlh-6i-xpr"/>
