@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // Delegate
+    var imageCustomDelegate: ImageCustomViewDelegate?
+    
     // MARK: IBOutlets
     // StackViews
     @IBOutlet weak var mainStackView: CustomStackView!
@@ -29,6 +32,10 @@ class ViewController: UIViewController {
     let selectedlayout1 = #imageLiteral(resourceName: "selectedLayout1")
     let selectedLayout2 = #imageLiteral(resourceName: "selectedLayout2")
     let selectedLayout3 = #imageLiteral(resourceName: "selectedLayout3")
+    
+    // Button Outlet 
+    @IBOutlet weak var imageButton: UIButton!
+    
    
         
     @IBAction func firstLayoutTapped(_ sender: UIButton) {
@@ -42,6 +49,18 @@ class ViewController: UIViewController {
     @IBAction func thirdLayoutPressed(_ sender: UIButton) {
         manageDefaultView()
     }
+    
+    @IBAction func imageButtonPressed(_ sender: UIButton) {
+        
+        print("Je suis le bouton \(sender.tag)")
+        
+        imageCustomDelegate = self
+        
+        
+        
+    }
+    
+    
     
     private func manageTopStackView() {
         firstLayout.isSelected = true
@@ -97,6 +116,12 @@ class ViewController: UIViewController {
     // Just pour commit
 
 
+}
+
+extension ViewController: ImageCustomViewDelegate {
+    func addImageToCustomView(theImg: UIImage, description: String) {
+        
+    }
 }
 
 

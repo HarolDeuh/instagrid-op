@@ -16,7 +16,9 @@
 		5450523A2406E43400084CC1 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 545052382406E43400084CC1 /* ThirstySoftRegular.otf */; };
 		5450523B2406E43400084CC1 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 545052392406E43400084CC1 /* Delm-Medium.otf */; };
 		549662AC240814C200AC55BE /* LayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549662AB240814C200AC55BE /* LayoutButton.swift */; };
+		54AF41EF24193A6100B1AE17 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AF41EE24193A6100B1AE17 /* CustomView.swift */; };
 		54ED20D8240967CF00A5C879 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ED20D7240967CF00A5C879 /* CustomStackView.swift */; };
+		54F3D00E24194DB7003514C3 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F3D00D24194DB7003514C3 /* ImageButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +33,9 @@
 		545052382406E43400084CC1 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		545052392406E43400084CC1 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		549662AB240814C200AC55BE /* LayoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutButton.swift; sourceTree = "<group>"; };
+		54AF41EE24193A6100B1AE17 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		54ED20D7240967CF00A5C879 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
+		54F3D00D24194DB7003514C3 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				545052262406E26600084CC1 /* Main.storyboard */,
 				549662AB240814C200AC55BE /* LayoutButton.swift */,
 				54ED20D7240967CF00A5C879 /* CustomStackView.swift */,
+				54AF41EE24193A6100B1AE17 /* CustomView.swift */,
+				54F3D00D24194DB7003514C3 /* ImageButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,7 +192,9 @@
 			files = (
 				54ED20D8240967CF00A5C879 /* CustomStackView.swift in Sources */,
 				549662AC240814C200AC55BE /* LayoutButton.swift in Sources */,
+				54AF41EF24193A6100B1AE17 /* CustomView.swift in Sources */,
 				545052252406E26600084CC1 /* ViewController.swift in Sources */,
+				54F3D00E24194DB7003514C3 /* ImageButton.swift in Sources */,
 				545052212406E26600084CC1 /* AppDelegate.swift in Sources */,
 				545052232406E26600084CC1 /* SceneDelegate.swift in Sources */,
 			);

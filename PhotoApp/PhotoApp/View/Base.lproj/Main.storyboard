@@ -95,66 +95,122 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qgP-TH-dpf" userLabel="Top Stack View" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="309" height="147"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOQ-H0-cVS">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOQ-H0-cVS" customClass="Custom" customModule="PhotoApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
                                                         <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hfc-M8-i1E">
+                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
+                                                            </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qq-Ku-Ui5">
                                                                 <rect key="frame" x="53.5" y="53.5" width="40" height="40"/>
                                                                 <state key="normal" image="LePlus"/>
+                                                                <connections>
+                                                                    <action selector="handleImageButtonPressed:" destination="BOQ-H0-cVS" eventType="touchUpInside" id="O5d-v4-ImN"/>
+                                                                    <action selector="imageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNq-kg-Jg8"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstItem="6qq-Ku-Ui5" firstAttribute="centerX" secondItem="BOQ-H0-cVS" secondAttribute="centerX" id="UTb-wE-iNg"/>
                                                             <constraint firstItem="6qq-Ku-Ui5" firstAttribute="centerY" secondItem="BOQ-H0-cVS" secondAttribute="centerY" id="UlK-kk-05F"/>
+                                                            <constraint firstAttribute="trailing" secondItem="hfc-M8-i1E" secondAttribute="trailing" id="eD4-SU-hxR"/>
+                                                            <constraint firstItem="hfc-M8-i1E" firstAttribute="top" secondItem="BOQ-H0-cVS" secondAttribute="top" id="fju-jF-ScW"/>
+                                                            <constraint firstItem="hfc-M8-i1E" firstAttribute="leading" secondItem="BOQ-H0-cVS" secondAttribute="leading" id="nZN-KG-hl5"/>
+                                                            <constraint firstAttribute="bottom" secondItem="hfc-M8-i1E" secondAttribute="bottom" id="rar-WX-Dom"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="imageView" destination="hfc-M8-i1E" id="REt-GW-mO7"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYx-9K-uTp">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYx-9K-uTp" customClass="Custom" customModule="PhotoApp" customModuleProvider="target">
                                                         <rect key="frame" x="162" y="0.0" width="147" height="147"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dI-Ic-k3Z">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="12c-yB-3BI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
+                                                            </imageView>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dI-Ic-k3Z">
                                                                 <rect key="frame" x="53.5" y="53.5" width="40" height="40"/>
                                                                 <state key="normal" image="LePlus"/>
+                                                                <connections>
+                                                                    <action selector="handleImageButtonPressed:" destination="ZYx-9K-uTp" eventType="touchUpInside" id="mNv-yv-Kbj"/>
+                                                                    <action selector="imageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8no-GQ-Ixm"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
+                                                            <constraint firstItem="12c-yB-3BI" firstAttribute="leading" secondItem="ZYx-9K-uTp" secondAttribute="leading" id="2PZ-by-Row"/>
+                                                            <constraint firstItem="12c-yB-3BI" firstAttribute="top" secondItem="ZYx-9K-uTp" secondAttribute="top" id="Asj-l3-Uly"/>
+                                                            <constraint firstAttribute="bottom" secondItem="12c-yB-3BI" secondAttribute="bottom" id="IhT-i8-j2y"/>
                                                             <constraint firstItem="3dI-Ic-k3Z" firstAttribute="centerY" secondItem="ZYx-9K-uTp" secondAttribute="centerY" id="X7s-aI-TDM"/>
+                                                            <constraint firstAttribute="trailing" secondItem="12c-yB-3BI" secondAttribute="trailing" id="sWZ-Si-UgR"/>
                                                             <constraint firstItem="3dI-Ic-k3Z" firstAttribute="centerX" secondItem="ZYx-9K-uTp" secondAttribute="centerX" id="zT3-VW-73l"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="imageView" destination="AQg-pZ-HYn" id="L1X-sN-EQq"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IGa-LV-QBy" userLabel="Bottom Stack View" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="162" width="309" height="147"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-fV-BFp">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-fV-BFp" customClass="Custom" customModule="PhotoApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFC-Af-yeD">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="26S-wB-Fy5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
+                                                            </imageView>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFC-Af-yeD">
                                                                 <rect key="frame" x="53.5" y="53.5" width="40" height="40"/>
                                                                 <state key="normal" image="LePlus"/>
+                                                                <connections>
+                                                                    <action selector="handleImageButtonPressed:" destination="YcZ-fV-BFp" eventType="touchUpInside" id="xZC-om-ewU"/>
+                                                                    <action selector="imageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iq2-7L-RxY"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstItem="dFC-Af-yeD" firstAttribute="centerX" secondItem="YcZ-fV-BFp" secondAttribute="centerX" id="IUn-o0-Rhy"/>
+                                                            <constraint firstAttribute="bottom" secondItem="26S-wB-Fy5" secondAttribute="bottom" id="MKB-FY-0hz"/>
+                                                            <constraint firstItem="26S-wB-Fy5" firstAttribute="leading" secondItem="YcZ-fV-BFp" secondAttribute="leading" id="P8a-Rv-gus"/>
+                                                            <constraint firstAttribute="trailing" secondItem="26S-wB-Fy5" secondAttribute="trailing" id="ehj-tO-Uog"/>
+                                                            <constraint firstItem="26S-wB-Fy5" firstAttribute="top" secondItem="YcZ-fV-BFp" secondAttribute="top" id="k9k-K8-heK"/>
                                                             <constraint firstItem="dFC-Af-yeD" firstAttribute="centerY" secondItem="YcZ-fV-BFp" secondAttribute="centerY" id="paL-oH-qk7"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="imageView" destination="12c-yB-3BI" id="Oo8-TR-t3D"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-08-HO6">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReH-08-HO6" customClass="Custom" customModule="PhotoApp" customModuleProvider="target">
                                                         <rect key="frame" x="162" y="0.0" width="147" height="147"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4b-dj-7Go">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AQg-pZ-HYn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
+                                                            </imageView>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4b-dj-7Go">
                                                                 <rect key="frame" x="53.5" y="53.5" width="40" height="40"/>
                                                                 <state key="normal" image="LePlus"/>
+                                                                <connections>
+                                                                    <action selector="handleImageButtonPressed:" destination="ReH-08-HO6" eventType="touchUpInside" id="cHD-gG-AYh"/>
+                                                                    <action selector="imageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BcL-6n-GxN"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="AQg-pZ-HYn" secondAttribute="bottom" id="1kU-iX-K9l"/>
                                                             <constraint firstItem="r4b-dj-7Go" firstAttribute="centerX" secondItem="ReH-08-HO6" secondAttribute="centerX" id="duc-aY-X0B"/>
                                                             <constraint firstItem="r4b-dj-7Go" firstAttribute="centerY" secondItem="ReH-08-HO6" secondAttribute="centerY" id="hcQ-Yz-DkW"/>
+                                                            <constraint firstItem="AQg-pZ-HYn" firstAttribute="leading" secondItem="ReH-08-HO6" secondAttribute="leading" id="hw7-W3-iRd"/>
+                                                            <constraint firstAttribute="trailing" secondItem="AQg-pZ-HYn" secondAttribute="trailing" id="rcP-St-bfg"/>
+                                                            <constraint firstItem="AQg-pZ-HYn" firstAttribute="top" secondItem="ReH-08-HO6" secondAttribute="top" id="vx6-PS-KHc"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="imageView" destination="26S-wB-Fy5" id="xnd-V8-Mpv"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                             </stackView>
@@ -354,6 +410,7 @@
                         <outlet property="bottomStackView" destination="IGa-LV-QBy" id="6bm-zh-vOE"/>
                         <outlet property="buttonsStackView" destination="bWq-97-N4O" id="8jQ-La-kTk"/>
                         <outlet property="firstLayout" destination="yXq-Br-Jb6" id="Qhe-SZ-UoN"/>
+                        <outlet property="imageButton" destination="6qq-Ku-Ui5" id="xaA-Py-52Y"/>
                         <outlet property="instructionLabel" destination="8xf-fK-ZQl" id="dU4-Rg-NuY"/>
                         <outlet property="mainStackView" destination="BdR-WC-Iob" id="B1W-Py-g2f"/>
                         <outlet property="secondLayout" destination="ENJ-Z0-JtA" id="Nmp-db-WNZ"/>
@@ -364,7 +421,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="ljo-uC-UJZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="199.25037481259372" y="64.799999999999997"/>
+            <point key="canvasLocation" x="152" y="58"/>
         </scene>
     </scenes>
     <resources>
