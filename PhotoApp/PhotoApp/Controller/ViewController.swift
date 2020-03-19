@@ -38,16 +38,23 @@ class ViewController: UIViewController {
     
    
         
-    @IBAction func firstLayoutTapped(_ sender: UIButton) {
-        manageTopStackView()
+    @IBAction func firstLayoutTapped(_ sender: LayoutButton) {
+        //manageTopStackView()
+        print(sender.buttonDesc)
+        sender.layoutSelected()
+        
     }
     
-    @IBAction func secondLayoutTapped(_ sender: UIButton) {
-        manageBottomStackView()
+    @IBAction func secondLayoutTapped(_ sender: LayoutButton) {
+        //manageBottomStackView()
+        print("layout 2")
+        print(secondLayout.buttonDesc)
     }
     
-    @IBAction func thirdLayoutPressed(_ sender: UIButton) {
-        manageDefaultView()
+    @IBAction func thirdLayoutPressed(_ sender: LayoutButton) {
+        //manageDefaultView()
+        print("layout 3")
+        print(sender.buttonDesc)
     }
     
     @IBAction func imageButtonPressed(_ sender: UIButton) {
@@ -55,8 +62,6 @@ class ViewController: UIViewController {
         print("Je suis le bouton \(sender.tag)")
         
         imageCustomDelegate = self
-        
-        
         
     }
     

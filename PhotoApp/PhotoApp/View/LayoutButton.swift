@@ -10,22 +10,20 @@ import UIKit
 
 class LayoutButton: UIButton {
     
-    enum ButtonState {
-        case selected, notStelected, defaut
-
-    }
-    
-    
     var isOn: Bool = false
-    let thePrint: String = "Pressé !"
     let selectedSubview = UIImageView(image: #imageLiteral(resourceName: "Selected"))
-    var buttonState: ButtonState = .defaut
-    
+    var buttonDesc: String {
+        get {
+            return "Je suis le bouton numéro \(tag)"
+        }
+    }
     
     
     func layoutSelected() {
         if !isOn {
             self.isSelected = true
+            buttonStyle()
+            
         } else {
             self.isSelected = false
         }
@@ -38,16 +36,8 @@ class LayoutButton: UIButton {
         
     }
     
-    func setbuttonStyle() {
-        switch buttonState {
-        case .selected:
-            print("selectionné")
-        case .notStelected:
-            print("pas selectionné")
-        case .defaut:
-            print("rien")
-        }
-    }
+    
+    
     
 
 }
