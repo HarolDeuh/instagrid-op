@@ -36,7 +36,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="layout1"/>
                                         <connections>
-                                            <action selector="firstLayoutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aRh-G6-Yo7"/>
+                                            <action selector="layoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCq-xW-ERf"/>
                                             <action selector="layoutOne:" destination="ljo-uC-UJZ" eventType="touchUpInside" id="nGf-ws-uRK"/>
                                         </connections>
                                     </button>
@@ -44,14 +44,14 @@
                                         <rect key="frame" x="100" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="layout2"/>
                                         <connections>
-                                            <action selector="secondLayoutTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jQh-mu-kBa"/>
+                                            <action selector="layoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GoW-xP-069"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KT-Xu-Dbg" customClass="LayoutButton" customModule="PhotoApp" customModuleProvider="target">
                                         <rect key="frame" x="200" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="layout3"/>
                                         <connections>
-                                            <action selector="thirdLayoutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idu-KH-qvT"/>
+                                            <action selector="layoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCX-lN-RsR"/>
                                         </connections>
                                     </button>
                                 </subviews>

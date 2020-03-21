@@ -36,26 +36,26 @@ class ViewController: UIViewController {
     // Button Outlet 
     @IBOutlet weak var imageButton: UIButton!
     
+    // Variables
+    var selectedLayoutButton: LayoutButton?
+    
    
+    @IBAction func layoutButtonPressed(_ sender: LayoutButton) {
         
-    @IBAction func firstLayoutTapped(_ sender: LayoutButton) {
-        //manageTopStackView()
-        print(sender.buttonDesc)
-        sender.layoutSelected()
+        // Recuperer la valeur du layout du bouton, dans layoutubutton definir une nouvelle var qui contient un layout
+        
+        // Creer une methode dans le viewcontroller qui prend en parametre le layout, switch sur cette valeur puis disposition des subiew en fonction
+        
+        
+        if sender != selectedLayoutButton {
+            sender.toggleSelected()
+            selectedLayoutButton?.toggleSelected()
+            
+            selectedLayoutButton = sender
+        }
         
     }
-    
-    @IBAction func secondLayoutTapped(_ sender: LayoutButton) {
-        //manageBottomStackView()
-        print("layout 2")
-        print(secondLayout.buttonDesc)
-    }
-    
-    @IBAction func thirdLayoutPressed(_ sender: LayoutButton) {
-        //manageDefaultView()
-        print("layout 3")
-        print(sender.buttonDesc)
-    }
+
     
     @IBAction func imageButtonPressed(_ sender: UIButton) {
         
@@ -96,13 +96,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstLayout.setImage(selectedlayout1, for: .selected)
-        secondLayout.setImage(selectedLayout2, for: .selected)
-        thirdLayout.setImage(selectedLayout3, for: .selected)
-        
-        firstLayout.setImage(#imageLiteral(resourceName: "layout1"), for: .disabled)
-        secondLayout.setImage(#imageLiteral(resourceName: "layout2"), for: .disabled)
-        thirdLayout.setImage(#imageLiteral(resourceName: "layout3"), for: .disabled)
+        selectedLayoutButton = thirdLayout
+        thirdLayout.toggleSelected()
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -117,8 +112,6 @@ class ViewController: UIViewController {
             }
         })
     }
-    
-    // Just pour commit
 
 
 }

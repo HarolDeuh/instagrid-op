@@ -10,33 +10,37 @@ import UIKit
 
 class LayoutButton: UIButton {
     
-    var isOn: Bool = false
-    let selectedSubview = UIImageView(image: #imageLiteral(resourceName: "Selected"))
-    var buttonDesc: String {
+    enum Style {
+        case standard, selected
+    }
+    
+    var style: Style = .standard {
+        didSet{
+            setStyle(style)
+        }
+    }
+    let selectedImage = UIImage(imageLiteralResourceName: "Selected")
+    var imgSubview = UIImageView(image: #imageLiteral(resourceName: "Selected"))
+    var buttonDesc : String {
         get {
-            return "Je suis le bouton numéro \(tag)"
+            return "Je suis le bouton \(tag)"
         }
     }
     
-    
-    func layoutSelected() {
-        if !isOn {
-            self.isSelected = true
-            buttonStyle()
-            
-        } else {
-            self.isSelected = false
+    func setStyle(_ style: Style) {
+        switch style {
+        case .standard:
+            isSelected = false
+            imgSubview.removeFromSuperview()
+        case .selected:
+            isSelected = true
+            addSubview(imgSubview)
         }
-        isOn.toggle()
-    }
-
-    
-    private func buttonStyle() {
-        addSubview(selectedSubview)
-        
     }
     
-    
+    func toggleSelected() {
+        style = self.style == .selected ? .standard : .selected
+    }
     
     
 
