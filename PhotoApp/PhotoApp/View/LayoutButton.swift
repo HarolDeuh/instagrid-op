@@ -19,7 +19,7 @@ class LayoutButton: UIButton {
             setStyle(style)
         }
     }
-    let selectedImage = UIImage(imageLiteralResourceName: "Selected")
+    
     var imgSubview = UIImageView(image: #imageLiteral(resourceName: "Selected"))
     var buttonDesc : String {
         get {
@@ -30,10 +30,8 @@ class LayoutButton: UIButton {
     func setStyle(_ style: Style) {
         switch style {
         case .standard:
-            isSelected = false
             imgSubview.removeFromSuperview()
         case .selected:
-            isSelected = true
             addSubview(imgSubview)
         }
     }
