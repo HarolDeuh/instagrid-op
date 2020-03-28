@@ -51,7 +51,12 @@ class ViewController: UIViewController {
             sender.toggleSelected()
             selectedLayoutButton?.toggleSelected()
             
+            sender.upStackView = topStackView
+            sender.downStackView = bottomStackView
+            
             selectedLayoutButton = sender
+            sender.mainViewHandler(sender.tag)
+    
         }
         
     }
@@ -98,6 +103,11 @@ class ViewController: UIViewController {
         
         selectedLayoutButton = thirdLayout
         thirdLayout.toggleSelected()
+        
+        //firstLayout.upStackView = topStackView
+        //secondLayout.downStackView = bottomStackView
+        
+        
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {

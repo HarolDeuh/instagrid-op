@@ -10,6 +10,21 @@ import UIKit
 
 class LayoutButton: UIButton {
     
+    var upStackView: CustomStackView?
+    var downStackView: CustomStackView?
+    
+    enum TheView {
+        case first, second, third
+    }
+    
+    var theView: TheView = .third {
+        didSet {
+            updateLayout(theView)
+        }
+    }
+    
+    
+    
     enum Style {
         case standard, selected
     }
@@ -39,6 +54,35 @@ class LayoutButton: UIButton {
     func toggleSelected() {
         style = self.style == .selected ? .standard : .selected
     }
+    
+    private func updateLayout(_ theView: TheView) {
+        switch theView {
+        case .first:
+            upStackView?.arrangedSubviews[1].isHidden = true
+            downStackView?.arrangedSubviews[1].isHidden = false
+        case .second:
+            upStackView?.arrangedSubviews[1].isHidden = false
+            downStackView?.arrangedSubviews[1].isHidden = true
+        case .third:
+            upStackView?.arrangedSubviews[1].isHidden = false
+            downStackView?.arrangedSubviews[1].isHidden = false
+        }
+    }
+    
+    func mainViewHandler(_ senderTag: Int) {
+        switch senderTag {
+        case 0:
+            updateLayout(.first)
+        case 1:
+            updateLayout(.second)
+        case 2:
+            updateLayout(.third)
+        default:
+            print("quelque chose")
+        }
+        
+    }
+    
     
     
 
