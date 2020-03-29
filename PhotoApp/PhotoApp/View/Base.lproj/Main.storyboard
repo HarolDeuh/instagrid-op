@@ -409,12 +409,12 @@
                     <connections>
                         <outlet property="bottomStackView" destination="IGa-LV-QBy" id="6bm-zh-vOE"/>
                         <outlet property="buttonsStackView" destination="bWq-97-N4O" id="8jQ-La-kTk"/>
-                        <outlet property="firstLayout" destination="yXq-Br-Jb6" id="Qhe-SZ-UoN"/>
+                        <outlet property="firstLayoutButton" destination="yXq-Br-Jb6" id="Qhe-SZ-UoN"/>
                         <outlet property="imageButton" destination="6qq-Ku-Ui5" id="xaA-Py-52Y"/>
                         <outlet property="instructionLabel" destination="8xf-fK-ZQl" id="dU4-Rg-NuY"/>
                         <outlet property="mainStackView" destination="BdR-WC-Iob" id="B1W-Py-g2f"/>
-                        <outlet property="secondLayout" destination="ENJ-Z0-JtA" id="Nmp-db-WNZ"/>
-                        <outlet property="thirdLayout" destination="3KT-Xu-Dbg" id="FV1-Op-uU7"/>
+                        <outlet property="secondLayoutButton" destination="ENJ-Z0-JtA" id="Nmp-db-WNZ"/>
+                        <outlet property="thirdLayoutButton" destination="3KT-Xu-Dbg" id="FV1-Op-uU7"/>
                         <outlet property="topStackView" destination="qgP-TH-dpf" id="UnH-qs-zn0"/>
                     </connections>
                 </viewController>

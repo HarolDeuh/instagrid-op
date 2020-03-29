@@ -8,22 +8,13 @@
 
 import UIKit
 
+enum LayoutState {
+    case first, second, third
+}
+
 class LayoutButton: UIButton {
     
-    var upStackView: CustomStackView?
-    var downStackView: CustomStackView?
-    
-    enum TheView {
-        case first, second, third
-    }
-    
-    var theView: TheView = .third {
-        didSet {
-            updateLayout(theView)
-        }
-    }
-    
-    
+    var layout: LayoutState = .third
     
     enum Style {
         case standard, selected
@@ -36,11 +27,6 @@ class LayoutButton: UIButton {
     }
     
     var imgSubview = UIImageView(image: #imageLiteral(resourceName: "Selected"))
-    var buttonDesc : String {
-        get {
-            return "Je suis le bouton \(tag)"
-        }
-    }
     
     func setStyle(_ style: Style) {
         switch style {
@@ -55,32 +41,18 @@ class LayoutButton: UIButton {
         style = self.style == .selected ? .standard : .selected
     }
     
-    private func updateLayout(_ theView: TheView) {
-        switch theView {
+    func updateLayout(_ upStackView: CustomStackView, _ downStackView: CustomStackView) {
+        switch layout {
         case .first:
-            upStackView?.arrangedSubviews[1].isHidden = true
-            downStackView?.arrangedSubviews[1].isHidden = false
+            upStackView.arrangedSubviews[1].isHidden = true
+            downStackView.arrangedSubviews[1].isHidden = false
         case .second:
-            upStackView?.arrangedSubviews[1].isHidden = false
-            downStackView?.arrangedSubviews[1].isHidden = true
+            upStackView.arrangedSubviews[1].isHidden = false
+            downStackView.arrangedSubviews[1].isHidden = true
         case .third:
-            upStackView?.arrangedSubviews[1].isHidden = false
-            downStackView?.arrangedSubviews[1].isHidden = false
+            upStackView.arrangedSubviews[1].isHidden = false
+            downStackView.arrangedSubviews[1].isHidden = false
         }
-    }
-    
-    func mainViewHandler(_ senderTag: Int) {
-        switch senderTag {
-        case 0:
-            theView = .first
-        case 1:
-            theView = .second
-        case 2:
-            theView = .third
-        default:
-            print("quelque chose")
-        }
-        
     }
     
 }

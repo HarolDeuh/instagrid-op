@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // Delegate
-    var imageCustomDelegate: ImageCustomViewDelegate?
+    var imageCustomDelegate: ImagePickerDelegate?
     
     // MARK: IBOutlets
     // StackViews
@@ -21,9 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonsStackView: CustomStackView!
     
     // Layouts
-    @IBOutlet weak var firstLayout: LayoutButton!
-    @IBOutlet weak var secondLayout: LayoutButton!
-    @IBOutlet weak var thirdLayout: LayoutButton!
+    @IBOutlet weak var firstLayoutButton: LayoutButton!
+    @IBOutlet weak var secondLayoutButton: LayoutButton!
+    @IBOutlet weak var thirdLayoutButton: LayoutButton!
     
     //Label
     @IBOutlet weak var instructionLabel: UILabel!
@@ -37,40 +37,27 @@ class ViewController: UIViewController {
    
     @IBAction func layoutButtonPressed(_ sender: LayoutButton) {
         
-        // Recuperer la valeur du layout du bouton, dans layoutubutton definir une nouvelle var qui contient un layout
-        
-        // Creer une methode dans le viewcontroller qui prend en parametre le layout, switch sur cette valeur puis disposition des subiew en fonction
-        
-        sender.upStackView = topStackView
-        sender.downStackView = bottomStackView
-        
-        
         if sender != selectedLayoutButton {
             sender.toggleSelected()
             selectedLayoutButton?.toggleSelected()
-            
             selectedLayoutButton = sender
-            sender.mainViewHandler(sender.tag)
-    
+            sender.updateLayout(topStackView, bottomStackView)
         }
-        
     }
 
     
     @IBAction func imageButtonPressed(_ sender: UIButton) {
-        
-        print("Je suis le bouton \(sender.tag)")
-        
         imageCustomDelegate = self
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        selectedLayoutButton = thirdLayout
-        thirdLayout.toggleSelected()
-        
+        selectedLayoutButton = thirdLayoutButton
+        thirdLayoutButton.toggleSelected()
+        firstLayoutButton.layout = .first
+        secondLayoutButton.layout = .second
+        thirdLayoutButton.layout = .third
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -85,13 +72,11 @@ class ViewController: UIViewController {
             }
         })
     }
-
-
 }
 
-extension ViewController: ImageCustomViewDelegate {
-    func addImageToCustomView(theImg: UIImage, description: String) {
-        
+extension ViewController: ImagePickerDelegate {
+    func didSelect(image: UIImage, description: String) {
+        // code
     }
 }
 

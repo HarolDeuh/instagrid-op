@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol ImageCustomViewDelegate: class {
-    func addImageToCustomView(theImg: UIImage, description: String)
+protocol ImagePickerDelegate: class {
+    func didSelect(image: UIImage, description: String)
 }
 
 class Custom: UIView {
@@ -18,9 +18,10 @@ class Custom: UIView {
     
     @IBAction func handleImageButtonPressed(_ sender: UIButton) {
         
+        
     }
     
-    weak var imageCustomDelegate: ImageCustomViewDelegate?
+    weak var imageCustomDelegate: ImagePickerDelegate?
     
     func addImageBackground() {
         let mySubview = UIView()
