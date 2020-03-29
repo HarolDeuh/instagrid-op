@@ -72,18 +72,15 @@ class LayoutButton: UIButton {
     func mainViewHandler(_ senderTag: Int) {
         switch senderTag {
         case 0:
-            updateLayout(.first)
+            theView = .first
         case 1:
-            updateLayout(.second)
+            theView = .second
         case 2:
-            updateLayout(.third)
+            theView = .third
         default:
             print("quelque chose")
         }
         
     }
     
-    
-    
-
 }

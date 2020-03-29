@@ -28,11 +28,6 @@ class ViewController: UIViewController {
     //Label
     @IBOutlet weak var instructionLabel: UILabel!
     
-    //Constants
-    let selectedlayout1 = #imageLiteral(resourceName: "selectedLayout1")
-    let selectedLayout2 = #imageLiteral(resourceName: "selectedLayout2")
-    let selectedLayout3 = #imageLiteral(resourceName: "selectedLayout3")
-    
     // Button Outlet 
     @IBOutlet weak var imageButton: UIButton!
     
@@ -46,13 +41,13 @@ class ViewController: UIViewController {
         
         // Creer une methode dans le viewcontroller qui prend en parametre le layout, switch sur cette valeur puis disposition des subiew en fonction
         
+        sender.upStackView = topStackView
+        sender.downStackView = bottomStackView
+        
         
         if sender != selectedLayoutButton {
             sender.toggleSelected()
             selectedLayoutButton?.toggleSelected()
-            
-            sender.upStackView = topStackView
-            sender.downStackView = bottomStackView
             
             selectedLayoutButton = sender
             sender.mainViewHandler(sender.tag)
@@ -69,44 +64,12 @@ class ViewController: UIViewController {
         imageCustomDelegate = self
         
     }
-    
-    
-    
-    private func manageTopStackView() {
-        firstLayout.isSelected = true
-        secondLayout.isSelected = false
-        thirdLayout.isSelected = false
-        bottomStackView.arrangedSubviews[1].isHidden = false
-        topStackView.arrangedSubviews[1].isHidden = true
-    }
-    
-    private func manageBottomStackView() {
-        secondLayout.isSelected = true
-        firstLayout.isSelected = false
-        thirdLayout.isSelected = false
-        topStackView.arrangedSubviews[1].isHidden = false
-        bottomStackView.arrangedSubviews[1].isHidden = true
-    }
-    
-    private func manageDefaultView() {
-        thirdLayout.isSelected = true
-        firstLayout.isSelected = false
-        secondLayout.isSelected = false
-        topStackView.arrangedSubviews[1].isHidden = false
-        bottomStackView.arrangedSubviews[1].isHidden = false
-    }
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         selectedLayoutButton = thirdLayout
         thirdLayout.toggleSelected()
-        
-        //firstLayout.upStackView = topStackView
-        //secondLayout.downStackView = bottomStackView
-        
         
     }
     
