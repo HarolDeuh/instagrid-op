@@ -8,26 +8,32 @@
 
 import UIKit
 
-protocol ImagePickerDelegate: class {
-    func didSelect(image: UIImage, description: String)
-}
-
 class Custom: UIView {
     
     @IBOutlet weak var imageView: UIImageView!
+    weak var controller: UIViewController?
     
-    @IBAction func handleImageButtonPressed(_ sender: UIButton) {
-        
+    
+    let presentation = "je suis la customview"
+    
+    @IBAction func handleImageButtonPressed(_ sender: ImagePickerButton) {
+        print(sender.presentation)
         
     }
+}
+
+extension Custom: UIImagePickerControllerDelegate {
+    // le code
     
-    weak var imageCustomDelegate: ImagePickerDelegate?
-    
-    func addImageBackground() {
-        let mySubview = UIView()
-        mySubview.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        addSubview(mySubview)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imageView.contentMode = .scaleAspectFill
+            imageView.image = pickedImage
+        }
+        controller?.dismiss(animated: true, completion: nil)
     }
-    
-    
+}
+
+extension Custom: UINavigationControllerDelegate {
+    // Rien ici
 }

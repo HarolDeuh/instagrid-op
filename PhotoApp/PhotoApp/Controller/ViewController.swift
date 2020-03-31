@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // Delegate
-    var imageCustomDelegate: ImagePickerDelegate?
+    let imagePicker =  UIImagePickerController()
     
     // MARK: IBOutlets
     // StackViews
@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     
     // Variables
     var selectedLayoutButton: LayoutButton?
+    var maView: Custom?
     
    
     @IBAction func layoutButtonPressed(_ sender: LayoutButton) {
@@ -46,9 +47,16 @@ class ViewController: UIViewController {
     }
 
     
-    @IBAction func imageButtonPressed(_ sender: UIButton) {
-        imageCustomDelegate = self
+    @IBAction func imageButtonPressed(_ sender: ImagePickerButton) {
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true, completion: nil)
+        
     }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +66,9 @@ class ViewController: UIViewController {
         firstLayoutButton.layout = .first
         secondLayoutButton.layout = .second
         thirdLayoutButton.layout = .third
+        
+        imagePicker.delegate = self
+
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -74,13 +85,19 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: ImagePickerDelegate {
-    func didSelect(image: UIImage, description: String) {
-        // code
+
+extension ViewController: UIImagePickerControllerDelegate {
+    // le code
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            maView?.imageView.contentMode = .scaleAspectFill
+            maView?.imageView.image = pickedImage
+        }
+        dismiss(animated: true, completion: nil)
     }
 }
 
-
-
-
-
+extension ViewController: UINavigationControllerDelegate {
+    // rien ici
+}

@@ -24,16 +24,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8l-Ea-4qu">
-                                <rect key="frame" x="148" y="50" width="118.5" height="39"/>
+                                <rect key="frame" x="148.5" y="50" width="117" height="35"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bWq-97-N4O">
-                                <rect key="frame" x="67" y="750" width="280" height="80"/>
+                                <rect key="frame" x="-53" y="670" width="520" height="160"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXq-Br-Jb6" customClass="LayoutButton" customModule="PhotoApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                         <state key="normal" image="layout1"/>
                                         <connections>
                                             <action selector="layoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VCq-xW-ERf"/>
@@ -41,14 +41,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENJ-Z0-JtA" customClass="LayoutButton" customModule="PhotoApp" customModuleProvider="target">
-                                        <rect key="frame" x="100" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="180" y="0.0" width="160" height="160"/>
                                         <state key="normal" image="layout2"/>
                                         <connections>
                                             <action selector="layoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GoW-xP-069"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KT-Xu-Dbg" customClass="LayoutButton" customModule="PhotoApp" customModuleProvider="target">
-                                        <rect key="frame" x="200" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="360" y="0.0" width="160" height="160"/>
                                         <state key="normal" image="layout3"/>
                                         <connections>
                                             <action selector="layoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCX-lN-RsR"/>
@@ -72,14 +72,14 @@
                                 <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="G7D-ay-Ld6">
-                                <rect key="frame" x="127" y="149" width="160.5" height="53.5"/>
+                                <rect key="frame" x="102" y="145" width="210" height="64.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrowUp" translatesAutoresizingMaskIntoConstraints="NO" id="Aj4-p6-Vg4">
-                                        <rect key="frame" x="73.5" y="0.0" width="13.5" height="9.5"/>
+                                        <rect key="frame" x="91.5" y="0.0" width="27" height="19"/>
                                         <variation key="heightClass=compact-widthClass=compact" image="arrowLeft"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xf-fK-ZQl">
-                                        <rect key="frame" x="0.0" y="24.5" width="160.5" height="29"/>
+                                        <rect key="frame" x="0.0" y="34" width="210" height="30.5"/>
                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -87,7 +87,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUx-m5-lPa" userLabel="Main view">
-                                <rect key="frame" x="37.5" y="212.5" width="339" height="339"/>
+                                <rect key="frame" x="37.5" y="219.5" width="339" height="339"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BdR-WC-Iob" userLabel="Main Stack view" customClass="CustomStackView" customModule="PhotoApp" customModuleProvider="target">
                                         <rect key="frame" x="15" y="15" width="309" height="309"/>
@@ -101,8 +101,8 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hfc-M8-i1E">
                                                                 <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qq-Ku-Ui5">
-                                                                <rect key="frame" x="53.5" y="53.5" width="40" height="40"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qq-Ku-Ui5" customClass="ImagePickerButton" customModule="PhotoApp" customModuleProvider="target">
+                                                                <rect key="frame" x="33.5" y="33.5" width="80" height="80"/>
                                                                 <state key="normal" image="LePlus"/>
                                                                 <connections>
                                                                     <action selector="handleImageButtonPressed:" destination="BOQ-H0-cVS" eventType="touchUpInside" id="O5d-v4-ImN"/>
@@ -129,8 +129,8 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="12c-yB-3BI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
                                                             </imageView>
-                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dI-Ic-k3Z">
-                                                                <rect key="frame" x="53.5" y="53.5" width="40" height="40"/>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dI-Ic-k3Z" customClass="ImagePickerButton" customModule="PhotoApp" customModuleProvider="target">
+                                                                <rect key="frame" x="33.5" y="33.5" width="80" height="80"/>
                                                                 <state key="normal" image="LePlus"/>
                                                                 <connections>
                                                                     <action selector="handleImageButtonPressed:" destination="ZYx-9K-uTp" eventType="touchUpInside" id="mNv-yv-Kbj"/>
@@ -162,8 +162,8 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="26S-wB-Fy5">
                                                                 <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
                                                             </imageView>
-                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFC-Af-yeD">
-                                                                <rect key="frame" x="53.5" y="53.5" width="40" height="40"/>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFC-Af-yeD" customClass="ImagePickerButton" customModule="PhotoApp" customModuleProvider="target">
+                                                                <rect key="frame" x="33.5" y="33.5" width="80" height="80"/>
                                                                 <state key="normal" image="LePlus"/>
                                                                 <connections>
                                                                     <action selector="handleImageButtonPressed:" destination="YcZ-fV-BFp" eventType="touchUpInside" id="xZC-om-ewU"/>
@@ -190,8 +190,8 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AQg-pZ-HYn">
                                                                 <rect key="frame" x="0.0" y="0.0" width="147" height="147"/>
                                                             </imageView>
-                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4b-dj-7Go">
-                                                                <rect key="frame" x="53.5" y="53.5" width="40" height="40"/>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4b-dj-7Go" customClass="ImagePickerButton" customModule="PhotoApp" customModuleProvider="target">
+                                                                <rect key="frame" x="33.5" y="33.5" width="80" height="80"/>
                                                                 <state key="normal" image="LePlus"/>
                                                                 <connections>
                                                                     <action selector="handleImageButtonPressed:" destination="ReH-08-HO6" eventType="touchUpInside" id="cHD-gG-AYh"/>

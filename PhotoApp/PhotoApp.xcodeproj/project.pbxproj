@@ -18,7 +18,7 @@
 		549662AC240814C200AC55BE /* LayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549662AB240814C200AC55BE /* LayoutButton.swift */; };
 		54AF41EF24193A6100B1AE17 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AF41EE24193A6100B1AE17 /* CustomView.swift */; };
 		54ED20D8240967CF00A5C879 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ED20D7240967CF00A5C879 /* CustomStackView.swift */; };
-		54F3D00E24194DB7003514C3 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F3D00D24194DB7003514C3 /* ImageButton.swift */; };
+		54F3D00E24194DB7003514C3 /* ImagePickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F3D00D24194DB7003514C3 /* ImagePickerButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		549662AB240814C200AC55BE /* LayoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutButton.swift; sourceTree = "<group>"; };
 		54AF41EE24193A6100B1AE17 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		54ED20D7240967CF00A5C879 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
-		54F3D00D24194DB7003514C3 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		54F3D00D24194DB7003514C3 /* ImagePickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 				549662AB240814C200AC55BE /* LayoutButton.swift */,
 				54ED20D7240967CF00A5C879 /* CustomStackView.swift */,
 				54AF41EE24193A6100B1AE17 /* CustomView.swift */,
-				54F3D00D24194DB7003514C3 /* ImageButton.swift */,
+				54F3D00D24194DB7003514C3 /* ImagePickerButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,7 +194,7 @@
 				549662AC240814C200AC55BE /* LayoutButton.swift in Sources */,
 				54AF41EF24193A6100B1AE17 /* CustomView.swift in Sources */,
 				545052252406E26600084CC1 /* ViewController.swift in Sources */,
-				54F3D00E24194DB7003514C3 /* ImageButton.swift in Sources */,
+				54F3D00E24194DB7003514C3 /* ImagePickerButton.swift in Sources */,
 				545052212406E26600084CC1 /* AppDelegate.swift in Sources */,
 				545052232406E26600084CC1 /* SceneDelegate.swift in Sources */,
 			);
