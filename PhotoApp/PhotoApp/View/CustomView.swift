@@ -12,6 +12,7 @@ class Custom: UIView {
     
     @IBOutlet weak var imageView: UIImageView!
     weak var controller: UIViewController?
+    var pickerController = UIImagePickerController()
     
     
     let presentation = "je suis la customview"
