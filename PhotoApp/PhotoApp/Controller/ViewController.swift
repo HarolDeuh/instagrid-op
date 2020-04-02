@@ -31,9 +31,15 @@ class ViewController: UIViewController {
     // Button Outlet 
     @IBOutlet weak var imageButton: UIButton!
     
+    // ImagePicker Outlet
+    @IBOutlet weak var imagePickerTopLeft: ImagePickerView!
+    @IBOutlet weak var imagePickerTopRight: ImagePickerView!
+    @IBOutlet weak var imagePickerBottomLeft: ImagePickerView!
+    @IBOutlet weak var imagePickerBottomRight: ImagePickerView!
+    
     // Variables
     var selectedLayoutButton: LayoutButton?
-    var maView: Custom?
+    var currentImagePickerView: ImagePickerView?
     
    
     @IBAction func layoutButtonPressed(_ sender: LayoutButton) {
@@ -47,7 +53,7 @@ class ViewController: UIViewController {
     }
 
     
-    @IBAction func imageButtonPressed(_ sender: ImagePickerButton) {
+    func presentImagePicker() {
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
@@ -66,8 +72,6 @@ class ViewController: UIViewController {
         firstLayoutButton.layout = .first
         secondLayoutButton.layout = .second
         thirdLayoutButton.layout = .third
-        
-        imagePicker.delegate = self
 
     }
     
@@ -85,19 +89,28 @@ class ViewController: UIViewController {
     }
 }
 
+// MARK: - UIImagePickerControllerDelegate
 
 extension ViewController: UIImagePickerControllerDelegate {
-    // le code
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            maView?.imageView.contentMode = .scaleAspectFill
-            maView?.imageView.image = pickedImage
+            currentImagePickerView?.imageView.contentMode = .scaleAspectFill
+            currentImagePickerView?.imageView.image = pickedImage
         }
         dismiss(animated: true, completion: nil)
     }
 }
 
-extension ViewController: UINavigationControllerDelegate {
-    // rien ici
+// MARK: - UINavigationControllerDelegate
+extension ViewController: UINavigationControllerDelegate {}
+
+
+// MARK: - ImagePickerDelegate
+
+extension ViewController: ImagePickerDelegate {
+    func imagePickerButtonWasPressed(_ imagePicker: ImagePickerView) {
+        currentImagePickerView = imagePicker
+        presentImagePicker()
+    }
 }

@@ -8,15 +8,9 @@
 
 import UIKit
 
-protocol ImagePickerDelegate: class {
-    func didSelect(image: UIImage, description: String)
-}
-
 class ImagePickerButton: UIButton {
     
     let presentation = "je suis un picker bouton"
     let imagePicker = UIImagePickerController()
     var controller = UIViewController()
-    
-
 }
