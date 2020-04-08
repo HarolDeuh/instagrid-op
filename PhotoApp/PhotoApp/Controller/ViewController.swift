@@ -112,5 +112,6 @@ extension ViewController: ImagePickerDelegate {
     func imagePickerButtonWasPressed(_ imagePicker: ImagePickerView) {
         currentImagePickerView = imagePicker
         presentImagePicker()
+        
     }
 }
