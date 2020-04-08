@@ -37,6 +37,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var imagePickerBottomLeft: ImagePickerView!
     @IBOutlet weak var imagePickerBottomRight: ImagePickerView!
     
+    // Main View
+    @IBOutlet weak var mainView: UIView!
+    
+    
     // Variables
     var selectedLayoutButton: LayoutButton?
     var currentImagePickerView: ImagePickerView?
@@ -63,7 +67,38 @@ class ViewController: UIViewController {
     }
     
     
+    private func transformMainViewWith(gesture: UIPanGestureRecognizer) {
+        let translation = gesture.translation(in: mainView)
+        mainView.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
+        
+        
 
+    }
+
+   
+    @objc func handleSwipe(_ swipe: UISwipeGestureRecognizer) {
+        UIView.animate(withDuration: 0.3, animations: {
+            var mainViewPosition = self.mainView.center
+            mainViewPosition.y = -1000
+            self.mainView.center = mainViewPosition
+        }) { _ in
+            print("animation finished")
+        }
+        
+    }
+    
+    
+    
+    
+
+    fileprivate func configureSwipeGesture() {
+        
+        
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+        swipeGesture.direction = .up
+        mainView.addGestureRecognizer(swipeGesture)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,6 +107,8 @@ class ViewController: UIViewController {
         firstLayoutButton.layout = .first
         secondLayoutButton.layout = .second
         thirdLayoutButton.layout = .third
+        
+        configureSwipeGesture()
 
     }
     
@@ -97,8 +134,14 @@ extension ViewController: UIImagePickerControllerDelegate {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             currentImagePickerView?.imageView.contentMode = .scaleAspectFill
             currentImagePickerView?.imageView.image = pickedImage
+            currentImagePickerView?.imagePickerButton.imageView?.isHidden = true
+            currentImagePickerView?.imagePickerButton.adjustsImageWhenHighlighted = false
+            
+            
+            
         }
         dismiss(animated: true, completion: nil)
+        
     }
 }
 
