@@ -67,5 +67,7 @@
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Cette application souhaite utiliser vos photos</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Cette application souhaite sauvegarder vos photos</string>
 </dict>
 </plist>

@@ -70,25 +70,36 @@ class ViewController: UIViewController {
     private func transformMainViewWith(gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: mainView)
         mainView.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
+    }
+    
+    private func shareImage(_ image: UIImage) {
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        present(activityController, animated: true)
+    }
+    
+    private func createImage() {
+        let renderer = UIGraphicsImageRenderer(size: mainView.bounds.size)
+        let image = renderer.image { ctx in
+            view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+        }
+        shareImage(image)
         
-        
-
     }
 
    
     @objc func handleSwipe(_ swipe: UISwipeGestureRecognizer) {
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: 0.6, animations: {
             var mainViewPosition = self.mainView.center
             mainViewPosition.y = -1000
             self.mainView.center = mainViewPosition
+            self.mainView.alpha = 0
         }) { _ in
-            print("animation finished")
+            self.createImage()
+            print("je remet l'image a sa position")
+            self.mainView.center.y = 1500
+            self.mainView.alpha = 1
         }
-        
     }
-    
-    
-    
     
 
     fileprivate func configureSwipeGesture() {
@@ -135,9 +146,6 @@ extension ViewController: UIImagePickerControllerDelegate {
             currentImagePickerView?.imageView.contentMode = .scaleAspectFill
             currentImagePickerView?.imageView.image = pickedImage
             currentImagePickerView?.imagePickerButton.imageView?.isHidden = true
-            currentImagePickerView?.imagePickerButton.adjustsImageWhenHighlighted = false
-            
-            
             
         }
         dismiss(animated: true, completion: nil)

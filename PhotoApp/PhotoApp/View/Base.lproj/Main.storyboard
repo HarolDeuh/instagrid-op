@@ -152,6 +152,7 @@
                                                             <constraint firstAttribute="trailing" secondItem="12c-yB-3BI" secondAttribute="trailing" id="sWZ-Si-UgR"/>
                                                         </constraints>
                                                         <connections>
+                                                            <outlet property="imagePickerButton" destination="3dI-Ic-k3Z" id="kwv-S5-fMh"/>
                                                             <outlet property="imagePickerDelegate" destination="BYZ-38-t0r" id="hCc-22-cUK"/>
                                                             <outlet property="imageView" destination="12c-yB-3BI" id="Lfv-nY-Zgd"/>
                                                         </connections>
@@ -187,6 +188,7 @@
                                                             <constraint firstItem="dFC-Af-yeD" firstAttribute="top" secondItem="YcZ-fV-BFp" secondAttribute="top" id="pFo-Bn-mqY"/>
                                                         </constraints>
                                                         <connections>
+                                                            <outlet property="imagePickerButton" destination="dFC-Af-yeD" id="RMl-oj-taA"/>
                                                             <outlet property="imagePickerDelegate" destination="BYZ-38-t0r" id="qJH-mg-l9Q"/>
                                                             <outlet property="imageView" destination="26S-wB-Fy5" id="ccA-lO-vh6"/>
                                                         </connections>
@@ -217,6 +219,7 @@
                                                             <constraint firstItem="AQg-pZ-HYn" firstAttribute="top" secondItem="ReH-08-HO6" secondAttribute="top" id="vx6-PS-KHc"/>
                                                         </constraints>
                                                         <connections>
+                                                            <outlet property="imagePickerButton" destination="r4b-dj-7Go" id="q7w-ZM-dib"/>
                                                             <outlet property="imagePickerDelegate" destination="BYZ-38-t0r" id="e73-4Y-lUu"/>
                                                             <outlet property="imageView" destination="AQg-pZ-HYn" id="jcK-YN-cvx"/>
                                                         </connections>
