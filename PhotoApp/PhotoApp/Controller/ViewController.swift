@@ -78,26 +78,25 @@ class ViewController: UIViewController {
     }
     
     private func createImage() {
-        let renderer = UIGraphicsImageRenderer(size: mainView.bounds.size)
+        let renderer = UIGraphicsImageRenderer(size: mainView.frame.size)
         let image = renderer.image { ctx in
-            view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+            mainView.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
         }
         shareImage(image)
         
     }
 
    
+    
     @objc func handleSwipe(_ swipe: UISwipeGestureRecognizer) {
-        UIView.animate(withDuration: 0.6, animations: {
+        UIView.animate(withDuration: 0.8, animations: {
             var mainViewPosition = self.mainView.center
             mainViewPosition.y = -1000
             self.mainView.center = mainViewPosition
-            self.mainView.alpha = 0
+            
         }) { _ in
             self.createImage()
-            print("je remet l'image a sa position")
-            self.mainView.center.y = 1500
-            self.mainView.alpha = 1
+            self.mainView.center.y = self.view.bounds.height / 2
         }
     }
     
@@ -120,6 +119,7 @@ class ViewController: UIViewController {
         thirdLayoutButton.layout = .third
         
         configureSwipeGesture()
+        
 
     }
     
@@ -150,6 +150,7 @@ extension ViewController: UIImagePickerControllerDelegate {
         }
         dismiss(animated: true, completion: nil)
         
+        
     }
 }
 
@@ -166,3 +167,4 @@ extension ViewController: ImagePickerDelegate {
         
     }
 }
+
