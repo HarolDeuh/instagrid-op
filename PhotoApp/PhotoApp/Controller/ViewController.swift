@@ -78,9 +78,9 @@ class ViewController: UIViewController {
     }
     
     private func createImage() {
-        let renderer = UIGraphicsImageRenderer(size: mainView.frame.size)
+        let renderer = UIGraphicsImageRenderer(size: mainView.bounds.size)
         let image = renderer.image { ctx in
-            mainView.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+            mainView.drawHierarchy(in: mainView.bounds, afterScreenUpdates: true)
         }
         shareImage(image)
         
