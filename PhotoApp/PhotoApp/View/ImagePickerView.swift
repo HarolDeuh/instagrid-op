@@ -17,9 +17,14 @@ class ImagePickerView: UIView {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imagePickerDelegate: ImagePickerDelegate?
     @IBOutlet weak var imagePickerButton: UIButton!
+    
     @IBAction func handleImageButtonPressed(_ sender: ImagePickerButton) {
         
         imagePickerDelegate?.imagePickerButtonWasPressed(self)
+    }
+    
+    func resetImage() {
+        imageView.image = nil
     }
 }
 

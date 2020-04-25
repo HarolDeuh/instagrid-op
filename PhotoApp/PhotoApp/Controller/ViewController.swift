@@ -40,10 +40,23 @@ class ViewController: UIViewController {
     // Main View
     @IBOutlet weak var mainView: UIView!
     
+    // ImageView
+    @IBOutlet weak var arrowImageView: UIImageView!
+    
     
     // Variables
     var selectedLayoutButton: LayoutButton?
     var currentImagePickerView: ImagePickerView?
+    var imagePickerViews = [ImagePickerView]()
+    var currentGesture: UIGestureRecognizer?
+    
+    var isPortrait: Bool = {
+//        return UIApplication.shared.statusBarOrientation.isLandscape
+        return UIInterfaceOrientation.portrait.isPortrait
+        
+    }()
+    
+    
     
    
     @IBAction func layoutButtonPressed(_ sender: LayoutButton) {
@@ -53,7 +66,17 @@ class ViewController: UIViewController {
             selectedLayoutButton?.toggleSelected()
             selectedLayoutButton = sender
             sender.updateLayout(topStackView, bottomStackView)
+            noImages()
         }
+        
+    }
+    
+    func noImages() {
+        imagePickerViews.forEach { imagepickerview in
+            imagepickerview.resetImage()
+        }
+        
+        
     }
 
     
@@ -63,7 +86,6 @@ class ViewController: UIViewController {
         imagePicker.sourceType = .photoLibrary
         
         present(imagePicker, animated: true, completion: nil)
-        
     }
     
     
@@ -72,40 +94,56 @@ class ViewController: UIViewController {
         mainView.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
     }
     
-    private func shareImage(_ image: UIImage) {
+    private func shareImage(_ image: UIImage, mainViewPosition: CGPoint) {
         let activityController = UIActivityViewController(activityItems: [image], applicationActivities: [])
-        present(activityController, animated: true)
+        present(activityController, animated: true) {
+            self.mainView.center = mainViewPosition
+        }
     }
     
-    private func createImage() {
+    private func createImage() -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: mainView.bounds.size)
         let image = renderer.image { ctx in
             mainView.drawHierarchy(in: mainView.bounds, afterScreenUpdates: true)
         }
-        shareImage(image)
         
+        return image
     }
 
    
     
     @objc func handleSwipe(_ swipe: UISwipeGestureRecognizer) {
-        UIView.animate(withDuration: 0.8, animations: {
-            var mainViewPosition = self.mainView.center
-            mainViewPosition.y = -1000
+        let mainViewOrigin = self.mainView.center
+        var mainViewPosition = mainViewOrigin
+        
+        UIView.animate(withDuration: 0.7, animations: {
+            
+            if !UIWindow.isLandscape {
+                mainViewPosition.y = -1000
+            } else {
+                mainViewPosition.x = -1000
+            }
             self.mainView.center = mainViewPosition
             
         }) { _ in
-            self.createImage()
-            self.mainView.center.y = self.view.bounds.height / 2
+            let imageToShare = self.createImage()
+            
+            self.shareImage(imageToShare, mainViewPosition: mainViewOrigin)
+            
         }
     }
     
 
     fileprivate func configureSwipeGesture() {
         
+        if let currentGesture = currentGesture {
+            mainView.removeGestureRecognizer(currentGesture)
+        }
         
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
-        swipeGesture.direction = .up
+        swipeGesture.direction = !UIWindow.isLandscape ? .up : .left
+        
+        currentGesture = swipeGesture
         mainView.addGestureRecognizer(swipeGesture)
     }
     
@@ -118,22 +156,26 @@ class ViewController: UIViewController {
         secondLayoutButton.layout = .second
         thirdLayoutButton.layout = .third
         
-        configureSwipeGesture()
-        
+        imagePickerViews = [imagePickerTopLeft, imagePickerTopRight, imagePickerBottomLeft, imagePickerBottomRight]
+
 
     }
-    
+    // coordinator.animate legit ?
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-        coordinator.animate(alongsideTransition: { context in
-            if UIDevice.current.orientation.isLandscape {
-                // activate landscape changes
-                self.instructionLabel.text = "Swipe left to share"
-                
-            } else {
-                // activate portrait changes
-                self.instructionLabel.text = "Swipe up to share"
-            }
+        coordinator.animate(alongsideTransition: { _ in
+            self.instructionLabel.text = !UIWindow.isLandscape ? "Swipe up to share" : "Swipe left to share"
+            self.configureSwipeGesture()
+            
+            
+            self.arrowImageView.image = !UIWindow.isLandscape ? UIImage(named: "arrowUp") : UIImage(named: "arrowLeft")
+            
+            
         })
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        configureSwipeGesture()
     }
 }
 
@@ -165,6 +207,22 @@ extension ViewController: ImagePickerDelegate {
         currentImagePickerView = imagePicker
         presentImagePicker()
         
+        
     }
 }
+
+extension UIWindow {
+    static var isLandscape: Bool {
+        if #available(iOS 13.0, *) {
+            return UIApplication.shared.windows
+                .first?
+                .windowScene?
+                .interfaceOrientation
+                .isLandscape ?? false
+        } else {
+            return UIApplication.shared.statusBarOrientation.isLandscape
+        }
+    }
+}
+
 
